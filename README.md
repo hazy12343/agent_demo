@@ -457,8 +457,6 @@ messages = [
 | 工具调用结果如何让 LLM 理解？ | 询问 OpenAI Function Calling 最佳实践 | 使用标准 `role: tool` + `tool_call_id` 消息格式 |
 | Context 过长怎么办？ | 讨论压缩策略 | 实现两级压缩：轮次截断 + 摘要压缩 |
 | 多 Session 如何隔离？ | 讨论架构设计 | 每个 `session_id` 对应独立的 `ContextManager` 实例 |
-| 如何安全执行数学表达式？ | 讨论 eval 安全风险 | 白名单字符过滤 + 禁用 `__builtins__` |
-| 测试如何不依赖真实 API？ | 讨论 Mock 策略 | `MockLLMClient` 预设响应序列，按 `call_count` 依次返回 |
 
 ### System Prompt 设计
 
